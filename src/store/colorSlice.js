@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const colorSlice = createSlice({
   name: "color",
-  initialState: { colorState: "yellow" },
+  initialState: { colorState: "#ffffff" },
   reducers: {
     colorUpdate: (state, actions) => {
       state.colorState = actions.payload;
