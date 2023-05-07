@@ -33,7 +33,9 @@ function Model() {
 
   const handleColor = (event) => {
     const color = event.target.id;
-    dispatch(colorUpdate(color));
+    if (color !== "") {
+      dispatch(colorUpdate(color));
+    }
   };
 
   const MovingSpot = ({ vec = new Vector3(), ...props }) => {
@@ -102,7 +104,7 @@ function Model() {
   return (
     <>
       <Canvas>
-        {light && <MovingSpot position={[3, 2, 0]} />}
+        {light && <MovingSpot position={[2, 2, 0]} />}
         <pointLight position={[10, 10, -10]} color="gray" />
         <pointLight position={[-10, -10, 10]} color="white" />
         {model ? <Cube /> : <Dodecahedron />}
