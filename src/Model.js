@@ -15,9 +15,9 @@ function Model() {
 
   const handleLight = (event) => {
     const name = event.target.innerText;
-    if (name === "Light On") {
+    if (name.includes("On")) {
       setLight(true);
-    } else if (name === "Light Off") {
+    } else if (name.includes("Off")) {
       setLight(false);
     }
   };
@@ -111,7 +111,7 @@ function Model() {
         <Caption>{`Art is\nanything\nyou can\nget away with.`}</Caption>
       </Canvas>
       <div className="fixed z-[2] top-[80%] md:top-[85%] left-[50%] translate-x-[-50%] translate-y-[-50%] hover:cursor-pointer ">
-        <div onClick={handleColor} className="flex p-2">
+        <div onClick={handleColor} className="flex justify-center p-2">
           <div
             id="#ffffff"
             className="mx-1 bg-white w-[30px] h-[30px] rounded-full"
@@ -138,15 +138,16 @@ function Model() {
           ></div>
         </div>
         <div onClick={handleModel} className="flex justify-center text-center">
-          <span className="px-2 py-1 m-2 bg-white hover:bg-gray-400 ">
-            Cube
-          </span>
-          <span className="px-2 py-1 m-2 bg-white hover:bg-gray-400 ">
+          <span className="px-2 m-1 text-white">Model</span>
+          <span className="px-2 m-1 bg-white hover:bg-gray-400 ">Cube</span>
+          <span className="px-2 m-1 bg-white hover:bg-gray-400 ">
             Dodecahedron
           </span>
         </div>
-        <div onClick={handleLight} className="text-center text-white p-2">
-          {light ? "Light Off" : "Light On"}
+        <div onClick={handleLight} className="text-center p-2">
+          <span className="px-2 m-1 text-white">Light</span>
+          <span className="px-2 m-1 bg-white hover:bg-gray-400 ">On</span>
+          <span className="px-2 m-1 bg-white hover:bg-gray-400 ">Off</span>
         </div>
       </div>
     </>
