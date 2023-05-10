@@ -8,19 +8,12 @@ import { Vector3 } from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Text, SpotLight } from "@react-three/drei";
 
+import { BsLightbulb, BsLightbulbOff } from "react-icons/bs";
+
 function Model() {
   const dispatch = useDispatch();
   const [light, setLight] = useState(true);
   const [model, setModel] = useState(true);
-
-  const handleLight = (event) => {
-    const name = event.target.innerText;
-    if (name.includes("On")) {
-      setLight(true);
-    } else if (name.includes("Off")) {
-      setLight(false);
-    }
-  };
 
   const handleModel = (event) => {
     const name = event.target.innerText;
@@ -138,16 +131,21 @@ function Model() {
           ></div>
         </div>
         <div onClick={handleModel} className="flex justify-center text-center">
-          <span className="px-2 m-1 text-white">Model</span>
           <span className="px-2 m-1 bg-white hover:bg-gray-400 ">Cube</span>
           <span className="px-2 m-1 bg-white hover:bg-gray-400 ">
             Dodecahedron
           </span>
         </div>
-        <div onClick={handleLight} className="text-center p-2">
-          <span className="px-2 m-1 text-white">Light</span>
-          <span className="px-2 m-1 bg-white hover:bg-gray-400 ">On</span>
-          <span className="px-2 m-1 bg-white hover:bg-gray-400 ">Off</span>
+        <div className="flex justify-center p-3">
+          {light ? (
+            <div id="on" onClick={() => setLight(false)}>
+              <BsLightbulbOff color="white" size={30} />
+            </div>
+          ) : (
+            <div id="off" onClick={() => setLight(true)}>
+              <BsLightbulb color="white" size={30} />
+            </div>
+          )}
         </div>
       </div>
     </>
