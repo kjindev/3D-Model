@@ -5,14 +5,14 @@
 ### 주제
 
 - Three.js를 이용하여 3D 모델을 웹 페이지에 구현
-- 배포 Page : [https://three-model-project.vercel.app/](https://three-model-project.vercel.app/)
+- 배포 Page : [https://three-model-project.vercel.app](https://three-model-project.vercel.app)
 
 ### 개요
 
 - 개발 인원 : 1인 (개인 프로젝트)
 - 개발 기간 : 2022.05.
 
-#### 사용 기술
+### 사용 기술
 
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=Three.js&logoColor=white"/> <img src="https://img.shields.io/badge/Redux Toolkit-764ABC?style=flat-square&logo=Redux&logoColor=white"/> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat-square&logo=Tailwind CSS&logoColor=white"/>
 
